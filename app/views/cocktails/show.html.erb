@@ -1,5 +1,11 @@
 <div class='container mt-4'>
 <h2><%= @cocktail.name %></h2>
 <br>
+<% @cocktail.doses.each do |item| %>
+<ul>
+  <li><%= item.description %> of <%= item.ingredient.name %> <%= link_to 'Delete dose', dose_path(item), method: 'delete' %></li>
+</ul>
+<% end %>
+<br>
 <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-secondary' %>
 </div>
