@@ -1,12 +1,12 @@
 <div class='container mt-4'>
-<h3>Add a dose</h3>
+<h3 class='add-title'>Add a dose</h3>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <div class="form-inputs">
+  <div class="form-inputs new-drink">
     <%= f.input :description %>
     <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" } %>
   </div>
-  <div class="form-actions btn btn-secondary">
+  <div class="form-actions btn btn-warning">
     <%= f.button :submit %>
   </div>
 <% end %>

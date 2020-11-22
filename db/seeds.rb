@@ -13,7 +13,12 @@ drinks = JSON.parse(open(url).read)
 drinks["drinks"].each do |ingredient|
   item = Ingredient.new(name: ingredient["strIngredient1"])
   item.save
-  puts "#{item.name} criado"
+  puts "#{item.name}"
 end
-
+apperol = Ingredient.new(name: 'Apperol')
+apperol.save 
+puts apperol.name
+cachaca = Ingredient.new(name: 'Cachaca')
+cachaca.save
+puts cachaca.name
 puts "seed finalizado, temos #{Ingredient.count} ingredientes"

@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.container {
-  background-color: #333333;
+body {
+  background-color: #292929;
+  margin: 0px 0px;
 }
 
 .welcome {
@@ -23,20 +24,27 @@
 
 .btn { 
   border-radius: 5px;
+  color: whitesmoke;
+  font-family: courgette;
 }
 
 .drink_name {
   color: #3b0b0b;
-  text-decoration: none;
   font-family: sansita swashed;
   font-weight: 100;
+
+  &:hover {
+    color: #aa3333;
+    text-decoration: none;
+    font-weight: 500;
+  }
 }
 
 .card {
   display: flex;
   align-items: center;
-  width: 300px;
-  padding-top: 40px;
+  width: 200px;
+  padding-top: 30px;
   background-color: #f8eedc;
   border: none;
   margin: 20px 20px;
@@ -51,4 +59,71 @@
 
 h4 {
   margin-top: 10px;
+}
+
+.new-drink {
+  color: whitesmoke;
+}
+
+.add-title {
+  color: whitesmoke;
+  font-family: courgette;
+  font-size: 30px;
+}
+
+.show-name {
+  color: whitesmoke;
+  font-family: sansita swashed;
+}
+
+.show-drink {
+  display: flex;
+}
+
+.back-btn {
+  margin-top: 20px;
+}
+
+li {
+  color: whitesmoke;
+  margin-top: 20px;
+}
+
+.add-dose {
+  margin-left: 20px;
+}
+
+.delete-btn {
+  color: antiquewhite;
+  margin-left: 20px;
+  background-color: #5A6268;
+  border-radius: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  &:hover {
+    color: #ff806a;
+    text-decoration: none;
+  }
+}
+
+.back-btn {
+  color: antiquewhite;
+  margin-top: 80px;
+
+  &:hover {
+    text-decoration: none;
+    color: greenyellow;
+  }
+}
+
+.add-index {
+  display: flex;
+  justify-content: center;
+}
+
+.pic {
+  box-shadow: 2px 2px 10px #242424;
+  border: 14px solid #181818;
+  border-radius: 3px;
 }

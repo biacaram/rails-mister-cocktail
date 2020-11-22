@@ -1,19 +1,18 @@
 <div class='container mt-4 mb-4'>
-<h2><%= @cocktail.name %></h2>
-<br>
-<div class='show-drink'>
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 300, crop: :fill%>
-<% @cocktail.doses.each do |item| %>
-<div class='show-doses'>
-<ul>
-  <li><%= item.description %> of <%= item.ingredient.name %> <%= link_to 'Delete dose', dose_path(item), method: 'delete' %></li>
-</ul>
-<% end %>
-</div>
-</div>
-<br>
-<%= link_to 'Add dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-secondary' %>
-<div class='back-btn'>
-<%= link_to 'Back to cocktails list', cocktails_path, class: 'btn btn-secondary' %>
-</div>
+  <h2 class='show-name'><%= @cocktail.name %></h2>
+  <br>
+    <div class='show-drink'>
+      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 300, crop: :fill, class: 'pic'%>
+      <div class='show-doses'>
+        <% @cocktail.doses.each do |item| %>
+          <ul>
+            <li><%= item.description %> of <%= item.ingredient.name %> <%= link_to 'Delete dose', dose_path(item), method: 'delete', class: 'delete-btn' %></li>
+          </ul>
+        <% end %>
+        <%= link_to 'Add dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-warning add-dose' %>
+      </div>
+    </div>
+  <div class='back-btn'>
+    <%= link_to '<< Back to cocktails list', cocktails_path, class: 'back-btn' %>
+  </div>
 </div>
