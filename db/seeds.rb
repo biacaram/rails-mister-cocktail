@@ -21,4 +21,8 @@ puts apperol.name
 cachaca = Ingredient.new(name: 'Cachaca')
 cachaca.save
 puts cachaca.name
+beer = Ingredient.new(name: 'Beer')
+beer.save
+salt = Ingredient.new(name: 'Salt')
+salt.save
 puts "seed finalizado, temos #{Ingredient.count} ingredientes"
